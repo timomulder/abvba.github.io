@@ -29,9 +29,61 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+        <script language="JavaScript">
+        <!-- hide from other browsers   
+
+        //Pictures to switch inbetween
+
+        var Rollpic1 = "img/portfolio/1-2.jpg";
+        var Rollpic2 = "img/portfolio/1-1.jpg";
+
+        //Start at the what pic:
+        var PicNumber=1;
+        //Number of pics:
+        var NumberOfPictures=2;
+        //Time between pics switching in secs
+        var HowLongBetweenPic=10;
+
+        //SwitchPic Function
+        function SwitchPic(counter){
+
+            if(counter < HowLongBetweenPic){
+            
+                counter++;
+                
+                //DEBUG in the status bar at the bottom of the screen
+                window.status="Switch picture at 5 : "+counter+" PicNumber: "+PicNumber+" ";
+                
+                //Display pic in what <IMG> tag roll is what I called the image
+                document.roll.src = eval("Rollpic" + PicNumber);
+                
+                //function calls itself
+                CallSwitchPic=window.setTimeout("SwitchPic("+counter+")",1500); 
+                
+                }
+                
+                else{
+                    //if its not the last picture goto the next picture
+                    if(PicNumber < NumberOfPictures){
+                        PicNumber++;
+                        SwitchPic(0);
+                    }
+                    //its the last picture go to the first one
+                    else{
+                        PicNumber=1;
+                        SwitchPic(0);
+                        }
+            
+                }
+
+        }
+        // Stop hiding from old browsers -->
+        </script>
+
 </head>
 
 <body id="page-top" class="index">
+<BODY bgcolor="#ffffff" text="#000000" link="#0000ff" vlink="#800080" alink="#ff0000" onload="SwitchPic(0)">
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -57,10 +109,10 @@
                         <a href="#about">Ervaring</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#portfolio">Portfolio</a>
+                        <a href="#bouwcoaching">Bouwcoaching</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#footer">Contact</a>
+                        <a href="#portfolio">Projecten</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +131,7 @@
                         <div class="intro-text">
                             <span class="name">Adviesbureau voor</span>
                             <hr class="star-light">
-                            <span class="name">BOUWEN in AMSTERDAM</span>
+                            <span class="bia"><b>BOUWEN</b> in <b>AMSTERDAM</b></span> <br><br><br>
                         </div>
                     </div>
                 </div>
@@ -88,9 +140,9 @@
                     <div class="intro-text">
                         <span class="name">Jan Fraijman</span>
                         <hr class="star-light">
-                        <span class="skills">Adviseur <br> Bouwcoach</span>
-                        <br><br>
-                        <!--<img class="img-responsive" src="img/profile.jpg" alt="portrait"> -->
+                        <span class="skills">adviseur <br> bouwcoach
+                        <br><br><br>
+                        <img class="img-responsive" src="img/profile.jpg" alt="portrait"> </span> <br>
                     </div>
                 </div>
 
@@ -110,8 +162,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Ervaring</h2>
-                    <hr class="star-primary">
+                    <h2>Ervaring</h2><br>
                 </div>
             </div>
             <div class="row">
@@ -121,86 +172,100 @@
 						bij De Architectengroep bv en daarna als oprichter/directeur bij Buro De Binnenstad bv.
 						Vanaf 2007 voer ik een zelfstandige advies- en ontwerppraktijk die voortbouwt op de ruime ervaring van de voorgaande jaren.
 						Tevens neem ik voor eigen rekening en risico initiatieven voor (nieuw-)bouwprojecten of deel
-						deze kennis met derden.  
+						deze kennis met derden. 
 						</adjusted></p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Grid Section -->
-    <section class="success" id="portfolio">
+    <!-- Contact Section -->
+    <section class="success" id="bouwcoaching">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Portfolio</h2>
-                    <hr class="star-light">
+                    <h2>Bouwcoaching</h2><br>
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/portf1.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/portf2.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/portf3.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/portf4.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/portf5.jpg" class="img-responsive" alt="">
-                    </a>
-                </div>
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/portf6.jpg" class="img-responsive" alt="">
-                    </a>
+                <div class="col-lg-12 ">
+                    <p> <adjusted> Wie zelf een huis wil (laten) bouwen moet zich veel kennis en vaardigheden eigen maken. Dat geldt als opdrachtgever van een bouwproces.
+Het is als de <u>dirigent</u> die voor het orkest staat, die zelf niet alle instrumenten kan bespelen maar wel weet hoe het totaal moet klinken. Dit is vooral van toepassing bij individuele projecten als ook bij Collectief Particulier Opdrachtgeverschap ("CPO" / het "samen bouwen") waarmee ik sinds 1989 ervaring heb.
+                        </adjusted></p>
                 </div>
             </div>
         </div>
     </section>
+
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Projecten</h2><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="./img/portfolio/1-1.jpg" class="portfolio-link" data-toggle="modal">
+                        <img src="img/portfolio/1-2.jpg" class="img-responsive1" alt="" name="roll">
+                    </a>
+                    <br>
+                </div>
+                <div class="col-md-6">
+                    <p class="projecten">
+                        adres: Laagte Kadijk 51 - 52, 1018 BB  Amsterdam
+                        <br>
+                        project: 2 atelierwoningen
+                        <br>
+                        bouwjaar: 2011
+                        <br>
+                        n.b.: i.s.m. Buro De Binnenstad bv <br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="./img/portfolio/2.jpg">
+                        <img src="img/portfolio/2.jpg" class="img-responsive1" alt="">
+                    </a>
+                    <br>
+                </div>
+                <div class="col-md-6">
+                    <p class="projecten">
+                        adres: Vinkenstraat 192 - 204, 1013 JX  Amsterdam
+                        <br>
+                        project: 5 woningen en 2 sociaal-culturele bedrijfsruimten
+                        <br>
+                        bouwjaar: 2006
+                        <br>
+                        n.b.: i.s.m. Buro De Binnenstad bv <br><br>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <a href="./img/portfolio/3.jpg">
+                        <img src="img/portfolio/3.jpg" class="img-responsive1" alt="">
+                    </a> <br>
+                </div>
+                <div class="col-md-6">
+                    <p class="projecten">
+                        adres: Derde Weteringdwarsstraat 1 A+B, 1017 TA  Amsterdam
+                        <br>
+                        project: 2 woningen (nieuwbouw Orde 2-pand)
+                        <br>
+                        bouwjaar: 2004
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
 
 
     <!-- Footer -->
@@ -211,7 +276,7 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Contact</h3>
-                        <p>06 2096 0861<br><img src="img/info.png" width="40%" height="40%" alt=""><br>Derde Weteringdwarsstraat 1<br>1017 TA<br>Amsterdam</p>
+                        <p>06 2096 0861<br>info@abvba.nl<br>Derde Weteringdwarsstraat 1<br>1017 TA &nbsp; Amsterdam</p>
                     </div>
                     
             </div>
@@ -234,229 +299,6 @@
         </a>
     </div>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/portf6.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/portf5.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/portf1.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/portf2.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/portf3.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/portf4.jpg" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -469,9 +311,6 @@
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
