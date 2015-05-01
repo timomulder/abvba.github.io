@@ -154,10 +154,11 @@ header .intro-text .bia {
     text-align: left;
 }
 
-@media(min-width:768px) {
+@media(min-width:992px) {
     header .container {
         padding-top: 200px;
         padding-bottom: 100px;
+        height: 100vh;
     }
 
     header .intro-text .name {
@@ -175,7 +176,7 @@ header .intro-text .bia {
     }
 }
 
-@media(min-width:768px) {
+@media(min-width:992px) {
     .navbar-fixed-top {
         padding: 1px 0;
         -webkit-transition: padding .3s;
@@ -203,7 +204,7 @@ header .intro-text .bia {
 
 .navbar {
     font-family: corbel;
-    font-size: 1.3em;
+    font-size: 1.4em;
 }
 
 .navbar a:focus {
@@ -237,7 +238,7 @@ section.success {
     background: rgb(114, 177, 190);
 }
 
-@media(max-width:767px) {
+@media(max-width:991px) {
     section {
         padding: 75px 0;
     }
@@ -297,7 +298,7 @@ section.success {
     z-index: 2;
 }
 
-@media(min-width:767px) {
+@media(min-width:991px) {
     #portfolio .portfolio-item {
         margin: 0 0 30px;
     }
@@ -523,3 +524,4 @@ p.projecten{
     padding-left: 15px;
     padding-right: 15px;
 }
+
