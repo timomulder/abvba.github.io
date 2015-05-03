@@ -24,6 +24,13 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script type="text/javascript" src="js/rotator.js"></script>
+
+    <script type="text/javascript" src="js/rotator2.js"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -31,56 +38,7 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-        <script language="JavaScript">
-        <!-- hide from other browsers   
 
-        //Pictures to switch inbetween
-
-        var Rollpic1 = "img/portfolio/1-2.jpg";
-        var Rollpic2 = "img/portfolio/1-1.jpg";
-
-        //Start at the what pic:
-        var PicNumber=1;
-        //Number of pics:
-        var NumberOfPictures=2;
-        //Time between pics switching in secs
-        var HowLongBetweenPic=5;
-
-        //SwitchPic Function
-        function SwitchPic(counter){
-
-            if(counter < HowLongBetweenPic){
-            
-                counter++;
-                
-                //DEBUG in the status bar at the bottom of the screen
-                window.status="Switch picture at 5 : "+counter+" PicNumber: "+PicNumber+" ";
-                
-                //Display pic in what <IMG> tag roll is what I called the image
-                document.roll.src = eval("Rollpic" + PicNumber);
-                
-                //function calls itself
-                CallSwitchPic=window.setTimeout("SwitchPic("+counter+")",1500); 
-                
-                }
-                
-                else{
-                    //if its not the last picture goto the next picture
-                    if(PicNumber < NumberOfPictures){
-                        PicNumber++;
-                        SwitchPic(0);
-                    }
-                    //its the last picture go to the first one
-                    else{
-                        PicNumber=1;
-                        SwitchPic(0);
-                        }
-            
-                }
-
-        }
-        // Stop hiding from old browsers -->
-        </script>
 
 </head>
 
@@ -154,7 +112,7 @@
                     <div class="intro-text">
                         <span class="name">Contact</span>
                         <hr class="star-light">
-                        <span class="skills">06 2096 0861<br>info@abvba.nl<br>Derde Weteringdwarsstraat 1<br>1017 TA &nbsp; Amsterdam</span>
+                        <span class="skills">06 2096 0861<br><a href="mailto:info@abvba.nl">i<!--niets-->n<!--niets-->fo<!--niets-->@a<!--niets-->bv<!--niets-->ba<!--niets-->.nl</a><br>Derde Weteringdwarsstraat 1<br>1017 TA &nbsp; Amsterdam</span>
                     </div>
                 </div>
             </div>
@@ -212,11 +170,16 @@
                     <h2>Projecten</h2><br>
                 </div>
             </div>
+
+
+
+
+
             <div class="row">
                 <div class="col-md-3">
-                    <a href="./img/portfolio/1-2.jpg" class="portfolio-link" data-toggle="modal">
-                        <img src="img/portfolio/1-2.jpg" class="img-responsive2" alt="" name="roll">
-                    </a>
+                        <a href="./img/portfolio/1-2.jpg"> 
+                        <img id="project1" src="./img/portfolio/1-2.jpg" alt="laagte kadijk" class="img-responsive2" />
+                        </a>                                 
                     <br>
                 </div>
                 <div class="col-md-9">
@@ -246,6 +209,39 @@
                     </p>
                 </div>
             </div>
+
+            <div class="row">
+                 <div class="col-md-3">
+                     <a href="./img/portfolio/0.jpg">
+                         <img src="img/portfolio/0.jpg" class="img-responsive2" alt="">
+                     </a>
+                     <br>
+                 </div>
+                 <div class="col-md-9">
+                     <p class="projecten">
+
+                     <div class="row">
+                         <div class="col-md-2">adres:</div> <div class="col-md-7"> Leidsestraat 110
+                         </div>
+                     </div>
+
+                     <div class="row">
+                         <div class="col-md-2">
+                             project: </div>  <div class="col-md-7">  Restauratie bedrijfspand: winkel+woning
+                             </div>
+                     </div>
+
+                     <div class="row">
+                         <div class="col-md-2">
+                             bouwjaar: </div> <div class="col-md-7"> 2011 </div>
+                     </div>
+                     <br>
+                     <div class="row"> <div class="col-md-8"> <!-- tekst volgt--> </div>
+                     </div>
+                     <br><br>
+                     </p>
+                 </div>
+             </div>
 
 
             <div class="row">
@@ -378,9 +374,9 @@
 
             <div class="row">
                 <div class="col-md-3">
-                    <a href="./img/portfolio/5-2.jpg">
-                        <img src="img/portfolio/5-1.jpg" class="img-responsive2" alt="">
-                    </a>
+                        <a href="./img/portfolio/5-2.jpg">
+                        <img id="project5" src="./img/portfolio/5-1.jpg" class="img-responsive2" alt="Kerkstraat 378" />
+                        </a>      
                     <br>
                 </div>
                 <div class="col-md-9">
@@ -472,7 +468,7 @@
                 <div class="row">
                     <div class="footer-col col-md-4">
                         <h3>Contact</h3>
-                        <p>06 2096 0861<br>info@abvba.nl<br>Derde Weteringdwarsstraat 1<br>1017 TA &nbsp; Amsterdam</p>
+                        <p>06 2096 0861<br><a href="mailto:info@abvba.nl">i<!--niets-->n<!--niets-->fo<!--niets-->@a<!--niets-->bv<!--niets-->ba<!--niets-->.nl</a><br>Derde Weteringdwarsstraat 1<br>1017 TA &nbsp; Amsterdam</p>
                     </div>
                     
             </div>
@@ -496,8 +492,7 @@
     </div>
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>

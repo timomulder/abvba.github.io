@@ -38,13 +38,17 @@ p.small {
     font-family: corbel;
 }
 
-a,
+
 a:hover,
 a:focus,
 a:active,
 a.active {
     outline: 0;
     color: rgb(114, 177, 190);
+}
+
+a:hover {
+    color:#ddd;
 }
 
 h1,
@@ -236,6 +240,10 @@ section h2 {
 section.success {
     color: #fff;
     background: rgb(114, 177, 190);
+}
+
+a {
+    color: #fff;
 }
 
 @media(max-width:991px) {
@@ -525,3 +533,33 @@ p.projecten{
     padding-right: 15px;
 }
 
+
+
+/* rotator in-page placement */
+    div.rotator {
+        max-width: 100%;
+        height: auto;
+        display: block;
+}
+/* rotator css */
+    div.rotator ul {
+        max-width: 100%;
+        height: auto;
+        display: block;
+}
+    div.rotator ul li {
+        max-width: 100%;
+        height: auto;
+        display: block;
+}
+/* rotator image style */
+    div.rotator ul li img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+}
+    div.rotator ul li.show {
+        max-width: 100%;
+        height: auto;
+        display: block;
+}
