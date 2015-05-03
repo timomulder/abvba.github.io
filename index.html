@@ -17,19 +17,33 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/freelancer.css" rel="stylesheet">
+   <link href="css/freelancer.css" rel="stylesheet">
 
    <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <style>
+        @font-face {
+          font-family: 'FontAwesome';
+          src: url('../font-awesome-4.1.0/fonts/fontawesome-webfont.eot?v=4.1.0');
+          src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.1.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.1.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular') format('svg');
+          font-weight: normal;
+          font-style: normal;
+        }
+        .fa {
+          display: inline-block;
+          font-family: FontAwesome;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .fa-chevron-up:before {
+          content: "\f077";
+        }
+    </style>
+    <!-- <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"> -->
+    <!-- <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css"> -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <script type="text/javascript" src="js/rotator.js"></script>
-
-    <script type="text/javascript" src="js/rotator2.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -491,7 +505,12 @@
         </a>
     </div>
 
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
+    <script type="text/javascript" async src="js/rotator.js"></script>
+
+    <script type="text/javascript" async src="js/rotator2.js"></script>
 
 
     <!-- Bootstrap Core JavaScript -->
