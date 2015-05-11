@@ -1,4 +1,4 @@
-var images3 = new Array ('./img/portfolio/4.jpg', './img/portfolio/4-1.jpg');
+var images3 = new Array ('./img/portfolio/small/4.jpg', './img/portfolio/small/4-1.jpg');
 var index3 = 1;
  
 function rotateImage3()

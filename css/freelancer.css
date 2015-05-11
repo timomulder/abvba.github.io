@@ -516,6 +516,7 @@ p.projecten{
 
 .img-responsive2{
   max-width: 100%;
+  width: 410px;
   height: auto;
   display: block;
 }
