@@ -23,5 +23,5 @@ function rotateImage1()
  
 $(document).ready(function()
 {
-  setInterval (rotateImage1, 5000);
+  setInterval (rotateImage1, 3500);
 });
