@@ -44,7 +44,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: rgb(114, 177, 190);
+    /* color: rgb(114, 177, 190); */
 }
 
 a:hover {
